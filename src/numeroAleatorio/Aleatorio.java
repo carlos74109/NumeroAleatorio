@@ -13,14 +13,17 @@ public class Aleatorio {
 		int contadorDificuldade = 0;
 		
 		if(dificuldade.equalsIgnoreCase("facil")) {
+			System.out.println("Digite um numero entre 0 e 10");
 			contadorDificuldade = 10;
 		}else if(dificuldade.equalsIgnoreCase("normal")) {
+			System.out.println("Digite um número entre 0 a 30");
 			contadorDificuldade = 30;
 		}else if(dificuldade.equalsIgnoreCase("dificil")) {
+			System.out.println("Digite um numero entre 0 a 100");
 			contadorDificuldade = 100;
 		}else {
 			System.out.println("È só selecionar a dificuldade, aplicação encerrada");
-			return;
+			
 		}
 		
 		int numeroAleatorio = new Random().nextInt(contadorDificuldade);
@@ -50,16 +53,11 @@ public class Aleatorio {
 			 System.out.println("vc tem mais " + menosPalpite + " palpite");
 			 numeroEntrada = numero.nextInt();
 			 palpite++;
-			 if(palpite == 10) {
-				 System.out.println("Vc falhou o numero escolhido foi " + numeroAleatorio);
-				 
-				 break;
-			 }else {
-				 System.out.println("PARABÉNS vc acertou");
-				 System.out.println("o numero escolhido foi " + numeroAleatorio);
-				 System.out.println("voce tentou " + palpite + " vezes");
+			
+			 if(numeroAleatorio == numeroEntrada ) {
+				 System.out.println("Parabéns, vc acertou, o número aleatorio era " + numeroAleatorio);
+				 System.out.println("vc tentou " + menosPalpite + " vezes!!");
 			 }
-			 
 		 }
 		 entradaDificuldade.close();
 		 numero.close();
