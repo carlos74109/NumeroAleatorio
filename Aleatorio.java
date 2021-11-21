@@ -54,9 +54,15 @@ public class Aleatorio {
 			 numeroEntrada = numero.nextInt();
 			 palpite++;
 			
+			 if(menosPalpite == 0) {
+				 System.out.println("Voce perdeu!!!");
+				 System.out.println("O número aleatorio foi " + numeroAleatorio);
+				 break;
+			 }
+			 
 			 if(numeroAleatorio == numeroEntrada ) {
 				 System.out.println("Parabéns, vc acertou, o número aleatorio era " + numeroAleatorio);
-				 System.out.println("vc tentou " + menosPalpite + " vezes!!");
+				 System.out.println("vc tentou " + palpite + " vezes!!");
 			 }
 		 }
 		 entradaDificuldade.close();
